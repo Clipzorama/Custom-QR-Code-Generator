@@ -8,11 +8,22 @@ const QRimage = document.getElementById("qrimage");
 
 
 generateBtn.addEventListener("click", () => {
-    imageContainer.classList.remove("hidden");
-    generateBtn.classList.add("hidden");
-    newqrBtn.classList.remove("hidden");
 
-    QRimage.src = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" + qrInput.value;
+    if (qrInput.value === "") {
+        qrInput.classList.add("error");
+        setTimeout(() => {
+        qrInput.classList.remove("error");
+
+        }, 500);
+    } else {
+        imageContainer.classList.remove("hidden");
+        generateBtn.classList.add("hidden");
+        newqrBtn.classList.remove("hidden");
+
+        QRimage.src = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" + qrInput.value;
+    }
+
+    
 })
 
 
@@ -21,6 +32,4 @@ newqrBtn.addEventListener("click", () => {
     qrInput.value = "";
     newqrBtn.classList.add("hidden");
     generateBtn.classList.remove("hidden");
-
-
 })
