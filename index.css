@@ -8,19 +8,92 @@
 
 
 :root {
-    --darker: hsl(93, 17, 10);
-    --dark-green: hsl(124, 35, 18);
-    --cream: hsl(74, 88, 87);
+    --darker: hsl(93, 17%, 10%);
+    --dark-green: hsl(124, 35%, 18%);
+    --cream: hsl(74, 88%, 87%);
+    --brown: hsl(14,26%,29%);
+}
+
+html {
+    font-size: 14px;
 }
 
 body {
     background-color: var(--darker);
+    min-height: 100vh;
 }
 
 .title {
     color: var(--cream);
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .sub-title {
     color: var(--cream);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem 2rem;
+}
+
+
+.main-container {
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-green);
+    width: 80%;
+    padding: 1rem 1.5rem 2rem;
+}
+
+.main-container > label {
+    margin-bottom: 20px;
+    color: var(--cream);
+    font-size: 1.1rem;
+}
+
+.main-container > input {
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.img-container {
+    /* border: 1px solid red; */
+    width: fit-content;
+    margin: 1rem auto 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.generate {
+    background-color: var(--brown);
+    width: 100%;
+    border: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--cream);
+    font-weight: 500;
+
+}
+
+.newQR {
+    background-color: var(--brown);
+    width: 100%;
+    border: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--cream);
+    font-weight: 500;
+
 }
