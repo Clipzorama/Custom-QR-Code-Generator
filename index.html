@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clipzorama QR Code Generator</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
     <script src="./index.js" defer></script>
 </head>
 <body>
     <h1 class="title">Clipzorama QR Maker</h1>
     <p class="sub-title">Whether you're sharing links, Wi-Fi passwords, or business information, this app makes it easy to create and share your codes in seconds. Perfect for personal and professional use!</p>
+
+    <div class="main-container">
+        <label for="qrinput">Enter your text or URL here!</label>
+        <input type="text" name="qrinput" id="qrinput">
+        <div class="img-container hidden">
+            <img src="" alt="QR Code" id="qrimage">
+        </div>
+        <button class="generate">Generate QR Code</button>
+        <button class="newQR hidden">Make a new QR Code</button>
+    </div>
     
 </body>
 </html>
